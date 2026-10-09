@@ -8,6 +8,9 @@
     "generate": "git submodule update --init --recursive && node index.mjs",
     "test": "tsc include/* --noEmit --ignoreConfig"
   },
+	"files": [
+		"/include/*.d.ts"
+	],
   "dependencies": {
     "@rbxts/compiler-types": "^3.0.0-types.0",
     "glob": "^13.0.6",
