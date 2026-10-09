@@ -1,6 +1,6 @@
 /// <reference no-default-lib="true"/>
 // / <reference path="generated/None.d.ts" />
-/// <reference types="@rbxts/compiler-types" />
+/// <reference types="polyts-compiler-types" />
 
 // LUA API
 
