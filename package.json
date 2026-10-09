@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "Generate TypeScript typedefs from Polytoria's yaml",
   "type": "commonjs",
-  "main": "index.js",
   "scripts": {
     "generate": "git submodule update --init --recursive && node index.mjs",
     "test": "tsc include/* --noEmit --ignoreConfig"
   },
+	"main": "include/polytoria.d.ts",
+	"types": "include/polytoria.d.ts",
 	"files": [
 		"/include/*.d.ts"
 	],
