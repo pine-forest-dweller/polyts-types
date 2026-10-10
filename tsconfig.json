@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"allowSyntheticDefaultImports": true,
 		"module": "commonjs",
-		"noLib": false,
+		"noLib": true,
 		"strict": true,
 		"target": "es6",
 		"strictNullChecks": true,

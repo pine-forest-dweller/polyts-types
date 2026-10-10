@@ -1,6 +1,6 @@
 {
-  "name": "polyts-types",
-  "version": "1.0.2",
+  "name": "@polyts/types",
+  "version": "1.0.3",
   "description": "Generate TypeScript typedefs from Polytoria's yaml",
   "type": "commonjs",
   "scripts": {
@@ -13,7 +13,7 @@
 		"/include/*.d.ts"
 	],
   "dependencies": {
-    "polyts-compiler-types": "git+https://github.com/pine-forest-dweller/polyts-compiler-types.git",
+    "@polyts/compiler-types": "git+https://github.com/pine-forest-dweller/polyts-compiler-types.git",
     "glob": "^13.0.6",
     "yaml": "^2.9.1"
   }
