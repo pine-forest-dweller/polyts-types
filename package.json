@@ -1,5 +1,5 @@
 {
-  "name": "@polyts/types",
+  "name": "@polytoria-ts/types",
   "version": "1.0.3",
   "description": "Generate TypeScript typedefs from Polytoria's yaml",
   "type": "commonjs",
