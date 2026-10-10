@@ -5535,564 +5535,614 @@ declare class Accessory extends Dynamic {
 	TargetAttachment: CharacterAttachment;
 }
 
-declare enum VerticalAlignment {
-	Top,
-	Middle,
-	Bottom,
-}
+declare namespace Enums {
+	const enum VerticalAlignment {
+		Top,
+		Middle,
+		Bottom,
+	}
 
-declare enum UIScrollMode {
-	Disabled,
-	Auto,
-	AlwaysShow,
-	NeverShow,
-}
+	const enum UIScrollMode {
+		Disabled,
+		Auto,
+		AlwaysShow,
+		NeverShow,
+	}
 
-declare enum UIMode {
-	Default,
-	GUI3D,
-}
+	const enum UIMode {
+		Default,
+		GUI3D,
+	}
 
-declare enum UIMaskMode {
-	Disabled,
-	ClipOnly,
-	ClipAndDraw,
-}
+	const enum UIMaskMode {
+		Disabled,
+		ClipOnly,
+		ClipAndDraw,
+	}
 
-declare enum UILayoutAlignment {
-	Start,
-	Center,
-	End,
-}
+	const enum UILayoutAlignment {
+		Start,
+		Center,
+		End,
+	}
 
-declare enum TweenTransition {
-	Linear,
-	Sine,
-	Quint,
-	Quart,
-	Quad,
-	Expo,
-	Elastic,
-	Cubic,
-	Circ,
-	Bounce,
-	Back,
-	Spring,
-}
+	const enum TweenTransition {
+		Linear,
+		Sine,
+		Quint,
+		Quart,
+		Quad,
+		Expo,
+		Elastic,
+		Cubic,
+		Circ,
+		Bounce,
+		Back,
+		Spring,
+	}
 
-declare enum TweenDirection {
-	In,
-	Out,
-	InOut,
-	OutIn,
-}
+	const enum TweenDirection {
+		In,
+		Out,
+		InOut,
+		OutIn,
+	}
 
-declare enum TextureFilter {
-	Nearest,
-	NearestNoMipmaps,
-	Linear,
-	LinearNoMipmaps,
-}
+	const enum TextureFilter {
+		Nearest,
+		NearestNoMipmaps,
+		Linear,
+		LinearNoMipmaps,
+	}
 
-declare enum TextTrimming {
-	None,
-	Character,
-	Word,
-	CharacterEllipsis,
-	WordEllipsis,
-}
+	const enum TextTrimming {
+		None,
+		Character,
+		Word,
+		CharacterEllipsis,
+		WordEllipsis,
+	}
 
-declare enum SoundAttenuationMode {
-	Disabled,
-	Linear,
-	Squared,
-	Logarithmic,
-}
+	const enum SoundAttenuationMode {
+		Disabled,
+		Linear,
+		Squared,
+		Logarithmic,
+	}
 
-declare enum SkyboxPreset {
-	Day1,
-	Day2,
-	Day3,
-	Day4,
-	Day5,
-	Day6,
-	Day7,
-	Morning1,
-	Morning2,
-	Morning3,
-	Morning4,
-	Night1,
-	Night2,
-	Night3,
-	Night4,
-	Night5,
-	Sunset1,
-	Sunset2,
-	Sunset3,
-	Sunset4,
-	Sunset5,
-}
+	const enum SkyboxPreset {
+		Day1,
+		Day2,
+		Day3,
+		Day4,
+		Day5,
+		Day6,
+		Day7,
+		Morning1,
+		Morning2,
+		Morning3,
+		Morning4,
+		Night1,
+		Night2,
+		Night3,
+		Night4,
+		Night5,
+		Sunset1,
+		Sunset2,
+		Sunset3,
+		Sunset4,
+		Sunset5,
+	}
 
-declare enum ShadowQuality {
-	Off,
-	Low,
-	Medium,
-	High,
-	Ultra,
-}
+	const enum ShadowQuality {
+		Off,
+		Low,
+		Medium,
+		High,
+		Ultra,
+	}
 
-declare enum RenderingMethod {
-	Standard,
-	Performance,
-	Compatibility,
-	Auto,
-}
+	const enum RenderingMethod {
+		Standard,
+		Performance,
+		Compatibility,
+		Auto,
+	}
 
-declare enum PlayerRotationMode {
-	Automatic,
-	CameraLocked,
-	Movement,
-	MovementCtrlLockOnly,
-}
+	const enum PlayerRotationMode {
+		Automatic,
+		CameraLocked,
+		Movement,
+		MovementCtrlLockOnly,
+	}
 
-declare enum PlayerMovementMode {
-	Default,
-	Scripted,
-}
+	const enum PlayerMovementMode {
+		Default,
+		Scripted,
+	}
 
-declare enum ParticleSimulationSpace {
-	Local,
-	World,
-}
+	const enum ParticleSimulationSpace {
+		Local,
+		World,
+	}
 
-declare enum ParticleOrientation {
-	FaceCamera,
-	FaceCameraFixedY,
-}
+	const enum ParticleOrientation {
+		FaceCamera,
+		FaceCameraFixedY,
+	}
 
-declare enum ParticleEmissionShape {
-	Point,
-	Sphere,
-	SphereSurface,
-	Box,
-	Ring,
-}
+	const enum ParticleEmissionShape {
+		Point,
+		Sphere,
+		SphereSurface,
+		Box,
+		Ring,
+	}
 
-declare enum PartShape {
-	Brick,
-	Sphere,
-	Cylinder,
-	Cone,
-	Wedge,
-	Corner,
-	Bevel,
-	Concave,
-	Truss,
-	Frame,
-	Octant,
-	Torus,
-	BeveledCorner,
-	ConcaveCorner,
-	TriangleCorner,
-	TriangleConcaveCorner,
-}
+	const enum PartShape {
+		Brick,
+		Sphere,
+		Cylinder,
+		Cone,
+		Wedge,
+		Corner,
+		Bevel,
+		Concave,
+		Truss,
+		Frame,
+		Octant,
+		Torus,
+		BeveledCorner,
+		ConcaveCorner,
+		TriangleCorner,
+		TriangleConcaveCorner,
+	}
 
-declare enum PartMaterial {
-	SmoothPlastic,
-	Brick,
-	Concrete,
-	Dirt,
-	Fabric,
-	Grass,
-	Ice,
-	Marble,
-	Metal,
-	MetalGrid,
-	MetalPlate,
-	Neon,
-	Planks,
-	Plastic,
-	Plywood,
-	RustyIron,
-	Sand,
-	Sandstone,
-	Snow,
-	Stone,
-	Wood,
-}
+	const enum PartMaterial {
+		SmoothPlastic,
+		Brick,
+		Concrete,
+		Dirt,
+		Fabric,
+		Grass,
+		Ice,
+		Marble,
+		Metal,
+		MetalGrid,
+		MetalPlate,
+		Neon,
+		Planks,
+		Plastic,
+		Plywood,
+		RustyIron,
+		Sand,
+		Sandstone,
+		Snow,
+		Stone,
+		Wood,
+	}
 
-declare enum MsaaScale {
-	Disabled,
-	X2,
-	X4,
-	X8,
-}
+	const enum MsaaScale {
+		Disabled,
+		X2,
+		X4,
+		X8,
+	}
 
-declare enum MeshCollisionType {
-	Bounds,
-	Convex,
-	Exact,
-}
+	const enum MeshCollisionType {
+		Bounds,
+		Convex,
+		Exact,
+	}
 
-declare enum MeshAnimationType {
-	Normal,
-	Looped,
-	PingPong,
-	OneShot,
-	OneShotImpluse,
-}
+	const enum MeshAnimationType {
+		Normal,
+		Looped,
+		PingPong,
+		OneShot,
+		OneShotImpluse,
+	}
 
-declare enum KeyCode {
-	None,
-	Space,
-	Exclam,
-	QuotedBl,
-	Numbersign,
-	Dollar,
-	Percent,
-	Ampersand,
-	Apostrophe,
-	ParenLeft,
-	Parenright,
-	Asterisk,
-	Plus,
-	Comma,
-	Minus,
-	Period,
-	Slash,
-	Key0,
-	Key1,
-	Key2,
-	Key3,
-	Key4,
-	Key5,
-	Key6,
-	Key7,
-	Key8,
-	Key9,
-	Colon,
-	Semicolon,
-	Less,
-	Equal,
-	Greater,
-	Question,
-	At,
-	A,
-	B,
-	C,
-	D,
-	E,
-	F,
-	G,
-	H,
-	I,
-	J,
-	K,
-	L,
-	M,
-	N,
-	O,
-	P,
-	Q,
-	R,
-	S,
-	T,
-	U,
-	V,
-	W,
-	X,
-	Y,
-	Z,
-	BracketLeft,
-	Backslash,
-	BracketRight,
-	Asciicircum,
-	Underscore,
-	QuoteLeft,
-	BraceLeft,
-	Bar,
-	BraceRight,
-	Asciitilde,
-	Yen,
-	Section,
-	GamepadA,
-	GamepadB,
-	GamepadX,
-	GamepadY,
-	GamepadBack,
-	GamepadGuide,
-	GamepadStart,
-	GamepadLeftStick,
-	GamepadRightStick,
-	GamepadLeftShoulder,
-	GamepadRightShoulder,
-	GamepadDpadUp,
-	GamepadDpadDown,
-	GamepadDpadLeft,
-	GamepadDpadRight,
-	GamepadPaddle1,
-	GamepadPaddle2,
-	GamepadPaddle3,
-	GamepadPaddle4,
-	GamepadTouchpad,
-	MouseLeft,
-	MouseRight,
-	MouseMiddle,
-	MouseWheelUp,
-	MouseWheelDown,
-	MouseWheelLeft,
-	MouseWheelRight,
-	MouseXbutton1,
-	MouseXbutton2,
-	GamepadAxisLeftX,
-	GamepadAxisLeftY,
-	GamepadAxisRightX,
-	GamepadAxisRightY,
-	GamepadAxisTriggerLeft,
-	GamepadAxisTriggerRight,
-	MouseAxisX,
-	MouseAxisY,
-	Special,
-	Escape,
-	Tab,
-	Backtab,
-	Backspace,
-	Enter,
-	KpEnter,
-	Insert,
-	Delete,
-	Left,
-	Up,
-	Right,
-	Down,
-	PageUp,
-	PageDown,
-	Shift,
-	Ctrl,
-	Meta,
-	Alt,
-	CapsLock,
-	NumLock,
-	ScrollLock,
-	F1,
-	F2,
-	F3,
-	F4,
-	F5,
-	F6,
-	F7,
-	F8,
-	F9,
-	F10,
-	F11,
-	F12,
-	Menu,
-	Hyper,
-	KpMultiply,
-	KpDivide,
-	KpSubtract,
-	KpPeriod,
-	KpAdd,
-	Kp0,
-	Kp1,
-	Kp2,
-	Kp3,
-	Kp4,
-	Kp5,
-	Kp6,
-	Kp7,
-	Kp8,
-	Kp9,
-	Unknown,
-}
+	const enum KeyCode {
+		None,
+		Space,
+		Exclam,
+		QuotedBl,
+		Numbersign,
+		Dollar,
+		Percent,
+		Ampersand,
+		Apostrophe,
+		ParenLeft,
+		Parenright,
+		Asterisk,
+		Plus,
+		Comma,
+		Minus,
+		Period,
+		Slash,
+		Key0,
+		Key1,
+		Key2,
+		Key3,
+		Key4,
+		Key5,
+		Key6,
+		Key7,
+		Key8,
+		Key9,
+		Colon,
+		Semicolon,
+		Less,
+		Equal,
+		Greater,
+		Question,
+		At,
+		A,
+		B,
+		C,
+		D,
+		E,
+		F,
+		G,
+		H,
+		I,
+		J,
+		K,
+		L,
+		M,
+		N,
+		O,
+		P,
+		Q,
+		R,
+		S,
+		T,
+		U,
+		V,
+		W,
+		X,
+		Y,
+		Z,
+		BracketLeft,
+		Backslash,
+		BracketRight,
+		Asciicircum,
+		Underscore,
+		QuoteLeft,
+		BraceLeft,
+		Bar,
+		BraceRight,
+		Asciitilde,
+		Yen,
+		Section,
+		GamepadA,
+		GamepadB,
+		GamepadX,
+		GamepadY,
+		GamepadBack,
+		GamepadGuide,
+		GamepadStart,
+		GamepadLeftStick,
+		GamepadRightStick,
+		GamepadLeftShoulder,
+		GamepadRightShoulder,
+		GamepadDpadUp,
+		GamepadDpadDown,
+		GamepadDpadLeft,
+		GamepadDpadRight,
+		GamepadPaddle1,
+		GamepadPaddle2,
+		GamepadPaddle3,
+		GamepadPaddle4,
+		GamepadTouchpad,
+		MouseLeft,
+		MouseRight,
+		MouseMiddle,
+		MouseWheelUp,
+		MouseWheelDown,
+		MouseWheelLeft,
+		MouseWheelRight,
+		MouseXbutton1,
+		MouseXbutton2,
+		GamepadAxisLeftX,
+		GamepadAxisLeftY,
+		GamepadAxisRightX,
+		GamepadAxisRightY,
+		GamepadAxisTriggerLeft,
+		GamepadAxisTriggerRight,
+		MouseAxisX,
+		MouseAxisY,
+		Special,
+		Escape,
+		Tab,
+		Backtab,
+		Backspace,
+		Enter,
+		KpEnter,
+		Insert,
+		Delete,
+		Left,
+		Up,
+		Right,
+		Down,
+		PageUp,
+		PageDown,
+		Shift,
+		Ctrl,
+		Meta,
+		Alt,
+		CapsLock,
+		NumLock,
+		ScrollLock,
+		F1,
+		F2,
+		F3,
+		F4,
+		F5,
+		F6,
+		F7,
+		F8,
+		F9,
+		F10,
+		F11,
+		F12,
+		Menu,
+		Hyper,
+		KpMultiply,
+		KpDivide,
+		KpSubtract,
+		KpPeriod,
+		KpAdd,
+		Kp0,
+		Kp1,
+		Kp2,
+		Kp3,
+		Kp4,
+		Kp5,
+		Kp6,
+		Kp7,
+		Kp8,
+		Kp9,
+		Unknown,
+	}
 
-declare enum ImageType {
-	Asset,
-	AssetThumbnail,
-	WorldThumbnail,
-	UserAvatar,
-	UserAvatarHeadshot,
-	GuildIcon,
-	GuildBanner,
-	PlaceIcon,
-}
+	const enum ImageType {
+		Asset,
+		AssetThumbnail,
+		WorldThumbnail,
+		UserAvatar,
+		UserAvatarHeadshot,
+		GuildIcon,
+		GuildBanner,
+		PlaceIcon,
+	}
 
-declare enum ImageStretchMode {
-	Stretch,
-	Centered,
-	Covered,
-}
+	const enum ImageStretchMode {
+		Stretch,
+		Centered,
+		Covered,
+	}
 
-declare enum HttpRequestMethod {
-	Get,
-	Post,
-	Put,
-	Delete,
-	Patch,
-}
+	const enum HttpRequestMethod {
+		Get,
+		Post,
+		Put,
+		Delete,
+		Patch,
+	}
 
-declare enum HorizontalAlignment {
-	Left,
-	Center,
-	Right,
-}
+	const enum HorizontalAlignment {
+		Left,
+		Center,
+		Right,
+	}
 
-declare enum GraphicsPreset {
-	Low,
-	Medium,
-	High,
-	Ultra,
-	Photo,
-	Custom,
-}
+	const enum GraphicsPreset {
+		Low,
+		Medium,
+		High,
+		Ultra,
+		Photo,
+		Custom,
+	}
 
-declare enum GradientImageFill {
-	Linear,
-	Radial,
-	Square,
-}
+	const enum GradientImageFill {
+		Linear,
+		Radial,
+		Square,
+	}
 
-declare enum GrabbablePermissionMode {
-	None,
-	Everyone,
-	Scripted,
-}
+	const enum GrabbablePermissionMode {
+		None,
+		Everyone,
+		Scripted,
+	}
 
-declare enum ForceMode {
-	Force,
-	Acceleration,
-	Impulse,
-	VelocityChange,
-}
+	const enum ForceMode {
+		Force,
+		Acceleration,
+		Impulse,
+		VelocityChange,
+	}
 
-declare enum FontWeight {
-	Thin,
-	ExtraLight,
-	Light,
-	Regular,
-	Medium,
-	SemiBold,
-	Bold,
-	ExtraBold,
-	Black,
-}
+	const enum FontWeight {
+		Thin,
+		ExtraLight,
+		Light,
+		Regular,
+		Medium,
+		SemiBold,
+		Bold,
+		ExtraBold,
+		Black,
+	}
 
-declare enum FontStyle {
-	Normal,
-	Italic,
-}
+	const enum FontStyle {
+		Normal,
+		Italic,
+	}
 
-declare enum FontPreset {
-	SourceSans,
-	PressStart2P,
-	Montserrat,
-	RobotoMono,
-	Rubik,
-	Poppins,
-	Domine,
-	Fredoka,
-	ComicNeue,
-	Orbitron,
-	Papyrus,
-	ComicSansMS,
-	JetBrainsMono,
-}
+	const enum FontPreset {
+		SourceSans,
+		PressStart2P,
+		Montserrat,
+		RobotoMono,
+		Rubik,
+		Poppins,
+		Domine,
+		Fredoka,
+		ComicNeue,
+		Orbitron,
+		Papyrus,
+		ComicSansMS,
+		JetBrainsMono,
+	}
 
-declare enum DominantAxis {
-	Width,
-	Height,
-}
+	const enum DominantAxis {
+		Width,
+		Height,
+	}
 
-declare enum CtrlLockCursor {
-	None,
-	Chevron,
-	Stereotypical,
-	StereotypicalDot,
-	Tactical,
-	Dot,
-	TacticalDot,
-	Plus,
-	X,
-}
+	const enum CtrlLockCursor {
+		None,
+		Chevron,
+		Stereotypical,
+		StereotypicalDot,
+		Tactical,
+		Dot,
+		TacticalDot,
+		Plus,
+		X,
+	}
 
-declare enum CreatorToolMode {
-	Select,
-	Move,
-	Rotate,
-	Scale,
-	Paint,
-	Brush,
-}
+	const enum CreatorToolMode {
+		Select,
+		Move,
+		Rotate,
+		Scale,
+		Paint,
+		Brush,
+	}
 
-declare enum ClientPlatform {
-	Desktop,
-	Mobile,
-	VR,
-}
+	const enum ClientPlatform {
+		Desktop,
+		Mobile,
+		VR,
+	}
 
-declare enum CharacterModelState {
-	Idle,
-	Walking,
-	Running,
-	Jumping,
-	Climbing,
-}
+	const enum CharacterModelState {
+		Idle,
+		Walking,
+		Running,
+		Jumping,
+		Climbing,
+	}
 
-declare enum CharacterAttachment {
-	Head,
-	UpperTorso,
-	LowerTorso,
-	ShoulderLeft,
-	ShoulderRight,
-	ElbowLeft,
-	ElbowRight,
-	HandLeft,
-	HandRight,
-	LegLeft,
-	LegRight,
-	KneeLeft,
-	KneeRight,
-	FootLeft,
-	FootRight,
-}
+	const enum CharacterAttachment {
+		Head,
+		UpperTorso,
+		LowerTorso,
+		ShoulderLeft,
+		ShoulderRight,
+		ElbowLeft,
+		ElbowRight,
+		HandLeft,
+		HandRight,
+		LegLeft,
+		LegRight,
+		KneeLeft,
+		KneeRight,
+		FootLeft,
+		FootRight,
+	}
 
-declare enum CameraMode {
-	Follow,
-	Free,
-	Scripted,
-}
+	const enum CameraMode {
+		Follow,
+		Free,
+		Scripted,
+	}
 
-declare enum BuiltInAudioPreset {
-	Jump,
-	Explosion,
-}
+	const enum BuiltInAudioPreset {
+		Jump,
+		Explosion,
+	}
 
-declare enum BorderMode {
-	Inset,
-	Middle,
-	Outline,
-}
+	const enum BorderMode {
+		Inset,
+		Middle,
+		Outline,
+	}
 
-declare enum BlendMode {
-	Mix,
-	Add,
-	Subtract,
-	Multiply,
-}
+	const enum BlendMode {
+		Mix,
+		Add,
+		Subtract,
+		Multiply,
+	}
 
-declare enum AspectRatioScaleType {
-	FitContainer,
-	FitMaxSize,
-	NoLimit,
-}
+	const enum AspectRatioScaleType {
+		FitContainer,
+		FitMaxSize,
+		NoLimit,
+	}
 
-declare enum AmbientSource {
-	Skybox,
-	Color,
-}
+	const enum AmbientSource {
+		Skybox,
+		Color,
+	}
 
-declare enum AddonPermission {
-	IORead,
-	IOWrite,
-}
+	const enum AddonPermission {
+		IORead,
+		IOWrite,
+	}
 
+}
+type VerticalAlignment = Enums.VerticalAlignment;
+type UIScrollMode = Enums.UIScrollMode;
+type UIMode = Enums.UIMode;
+type UIMaskMode = Enums.UIMaskMode;
+type UILayoutAlignment = Enums.UILayoutAlignment;
+type TweenTransition = Enums.TweenTransition;
+type TweenDirection = Enums.TweenDirection;
+type TextureFilter = Enums.TextureFilter;
+type TextTrimming = Enums.TextTrimming;
+type SoundAttenuationMode = Enums.SoundAttenuationMode;
+type SkyboxPreset = Enums.SkyboxPreset;
+type ShadowQuality = Enums.ShadowQuality;
+type RenderingMethod = Enums.RenderingMethod;
+type PlayerRotationMode = Enums.PlayerRotationMode;
+type PlayerMovementMode = Enums.PlayerMovementMode;
+type ParticleSimulationSpace = Enums.ParticleSimulationSpace;
+type ParticleOrientation = Enums.ParticleOrientation;
+type ParticleEmissionShape = Enums.ParticleEmissionShape;
+type PartShape = Enums.PartShape;
+type PartMaterial = Enums.PartMaterial;
+type MsaaScale = Enums.MsaaScale;
+type MeshCollisionType = Enums.MeshCollisionType;
+type MeshAnimationType = Enums.MeshAnimationType;
+type KeyCode = Enums.KeyCode;
+type ImageType = Enums.ImageType;
+type ImageStretchMode = Enums.ImageStretchMode;
+type HttpRequestMethod = Enums.HttpRequestMethod;
+type HorizontalAlignment = Enums.HorizontalAlignment;
+type GraphicsPreset = Enums.GraphicsPreset;
+type GradientImageFill = Enums.GradientImageFill;
+type GrabbablePermissionMode = Enums.GrabbablePermissionMode;
+type ForceMode = Enums.ForceMode;
+type FontWeight = Enums.FontWeight;
+type FontStyle = Enums.FontStyle;
+type FontPreset = Enums.FontPreset;
+type DominantAxis = Enums.DominantAxis;
+type CtrlLockCursor = Enums.CtrlLockCursor;
+type CreatorToolMode = Enums.CreatorToolMode;
+type ClientPlatform = Enums.ClientPlatform;
+type CharacterModelState = Enums.CharacterModelState;
+type CharacterAttachment = Enums.CharacterAttachment;
+type CameraMode = Enums.CameraMode;
+type BuiltInAudioPreset = Enums.BuiltInAudioPreset;
+type BorderMode = Enums.BorderMode;
+type BlendMode = Enums.BlendMode;
+type AspectRatioScaleType = Enums.AspectRatioScaleType;
+type AmbientSource = Enums.AmbientSource;
+type AddonPermission = Enums.AddonPermission;

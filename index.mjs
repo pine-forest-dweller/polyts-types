@@ -164,24 +164,30 @@ for (const fileName of typesFileNames) {
 
 
 const enumFileNames = globSync(`${YAML_DIR}/enums/*.yaml`);
+let redeclarations = ``;
+
+output += `declare namespace Enums {\n`;
 
 for (const fileName of enumFileNames) {
     const content = fs.readFileSync(fileName, "utf-8");
     const doc = parse(content);
 
     const name = doc.Name;
-    const desc = (doc.Description.length > 0) ? `\t//${doc.Description}` : ``;
+    const desc = (doc.Description.length > 0) ? `\t\t//${doc.Description}` : ``;
+    redeclarations += `type ${name} = Enums.${name};\n`;
     output += desc;
-    output += `declare enum ${name} {\n`;
+    output += `\tconst enum ${name} {\n`;
     for (const opt of doc.Options) {
         const desc = opt.Description;
         if (desc.length > 0) {
-            output += sanitizeDesc(desc, "\t");
+            output += sanitizeDesc(desc, "\t\t");
         }
-        output += `\t${opt.Name},\n`;
+        output += `\t\t${opt.Name},\n`;
     }
-    output += `}\n\n` 
+    output += `\t}\n\n` 
 }
 
+output += `}\n`;
+output += redeclarations;
 
 fs.writeFileSync(OUT_PATH, output);
