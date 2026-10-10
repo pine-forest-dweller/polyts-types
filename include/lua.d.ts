@@ -1,6 +1,6 @@
 /// <reference no-default-lib="true"/>
 // / <reference path="generated/None.d.ts" />
-/// <reference types="@polyts/compiler-types" />
+/// <reference types="@polytoria-ts/compiler-types" />
 
 // LUA API
 
